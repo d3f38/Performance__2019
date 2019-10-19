@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="favicon.png">   
     <script src="./js/index.js"></script>
     <script src="https://yastatic.net/jquery/3.3.1/jquery.js"></script>
+    <link rel="stylesheet" href="js/owl-carousel/owl.carousel.css"/>
+    <script src="js/owl-carousel/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
     <style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }
@@ -35,8 +37,8 @@ body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action
                 <p class="card-time"></p>
             </div>
         </div>
-    </template>
-    <template class="template-description">
+
+    </template><template class="template-description">
     <p class="card-description card-description_big description_critical">Робопылесос не смог сменить свое местоположение в течение последних 3 минут. Похоже, ему нужна помощь.
     <div class="critical-cam" onload="initCriticalCam()" touch-action="none">
 
@@ -61,7 +63,7 @@ body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action
 
         <div class="song-area">
             <div class="cover-wrap">
-                <img class="cover" src="https://avatars.yandex.net/get-music-content/193823/1820a43e.a.5517056-1/m1000x1000">
+                <img class="cover" src="img/m1000x1000.jpg">
             </div>
 
             <div class="song-data">
@@ -318,7 +320,11 @@ body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action
             <div class="card card_size_l critical">
                 <div class="card-heading heading-critical">
                     <div class="card-icon-wrap">
-                        <img class="card-icon" src="img/cam.svg">
+                        <div id="carousel">
+                            <div class="carousel-element">
+                                <img class="card-icon" src="img/cam.svg">
+                            </div>
+                        </div>
                     </div>
                     <h3 class="card-title">Пылесос застрял</h3>
                 </div>

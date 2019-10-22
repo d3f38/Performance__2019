@@ -9,15 +9,6 @@ const devices = document.querySelector('.devices');
 const pagiantorDevs = document.querySelector('.devices__paginator');
 let currentPageDevs = 1;
 
-// $('.card').each(function(e) {
-//     if ($(this).hasClass('card_size_s')) {
-//         $(this).css({'border-radius': '22px'})
-//     } else {
-//         $(this).css({'border-radius': '54px'})
-//     }
-// });
-
-
 let curValue;
 let curRotate;
 let maxRotate = 0.42; // 150 градусов
@@ -77,13 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
             item.style.borderRadius = '23px';
         }
     });
-    // $('.card').each(function(e) {
-    //     if ($(this).hasClass('card_size_s')) {
-    //         $(this).css({'border-radius': '22px'})
-    //     } else {
-    //         $(this).css({'border-radius': '23px'})
-    //     }
-    // });
+
     var waterContainer = document.querySelector('.card.card_size_s:last-child');
 
     waterContainer.innerHTML = 
@@ -135,31 +120,6 @@ selectOptions.forEach(o => {
         selectButtonText.innerText = e.target.innerText;
     })
 });
-
-
-
-
-
-// $(document).ready(function(){
-
-//     var carousel = $("#carousel");
-
-//     carousel.owlCarousel();
-
-// });
-
-// var carousel = document.querySelector("#carousel");
-// carousel.owlCarousel();
-
-function status(e) {
-    return 200 <= e.status && e.status < 300 ? Promise.resolve(e) : Promise.reject(new Error(e.statusText))
-}
-
-function json(e) {
-    return e.json()
-}
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
 

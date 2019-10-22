@@ -1,14 +1,5 @@
 "use strict";
 
-// const output = document.querySelector('.modal__value');
-// const rangeSLider = document.querySelector('.adjust-bar.adjust-bar_theme_temp');
-// const arrowLeftDevs = document.querySelector('.devices__paginator .paginator__arrow_left');
-// const arrowRightDevs = document.querySelector('.devices__paginator .paginator__arrow_right');
-// const panelCountDevs = document.querySelectorAll('.devices__panel').length;
-// const devices = document.querySelector('.devices');
-// const pagiantorDevs = document.querySelector('.devices__paginator');
-// let currentPageDevs = 1;
-
 let curValue;
 let curRotate;
 let maxRotate = 0.42; // 150 градусов
@@ -61,6 +52,11 @@ document.querySelectorAll('.panel_floor').forEach(p => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+    const buttonsContainer = document.querySelector('.buttons-wrap');
+
+    buttonsContainer.innerHTML = '<button class="button button_yellow" type="button">Да</button>' +
+        '<button class="button">Нет</button>';
+        
     [].slice.call(document.querySelectorAll('.card')).forEach(item => {
         if (item.classList.contains('card_size_s')) {
             item.style.borderRadius = '22px';
@@ -84,42 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 '</div>'
 
 });
-
-
-// const arrowLeftScens = document.querySelector('.scenarios__paginator .paginator__arrow_left');
-// const arrowRightScens = document.querySelector('.scenarios__paginator .paginator__arrow_right');
-// const panelCountScens = document.querySelectorAll('.scenarios__panel').length;
-// const pageCountScens = document.querySelectorAll('.scenarios__page').length;
-// const scenarios = document.querySelector('.scenarios');
-// const pagiantorScens = document.querySelector('.scenarios__paginator');
-// let currentPage = 1;
-
-
-
-
-// const selectButton = document.querySelector('.filter__select-button');
-// const selectButtonText = document.querySelector('.filter__select-button .button__text');
-// const selectOptions = document.querySelectorAll('.filter__select-item');
-// const popup = document.querySelector('.filter__select-popup');
-
-
-
-// let widths = '';
-// window.addEventListener('scroll', function() {
-//     widths += document.querySelectorAll('body')[0].offsetWidth;
-
-// });
-
-// selectOptions.forEach(o => {
-//     o.addEventListener('click', function(e) {
-//         document.querySelector('#' + e.target.dataset.group).checked = true;
-
-//         selectOptions.forEach(opt => opt.classList.toggle('filter__select-item_checked', false));
-//         e.target.classList.toggle('filter__select-item_checked', true);
-//         popup.classList.toggle('filter__select-popup_open', false);
-//         selectButtonText.innerText = e.target.innerText;
-//     })
-// });
 
 document.addEventListener("DOMContentLoaded", function () {
 

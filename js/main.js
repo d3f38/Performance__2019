@@ -1,62 +1,9 @@
-"use strict";
-
-let curValue;
-let curRotate;
-let maxRotate = 0.42; // 150 градусов
-let minRotate = -0.42; // -150 градусов
-
-const MIN_VALUE = 26;
-const MAX_VALUE = 35;
-const INDICATOR_OFFSET = 265;
-
-
-document.querySelectorAll('.modal_close').forEach(b => {
-    b.onclick = function() {
-        document.querySelectorAll('.modal').forEach(m => {
-            m.classList.toggle('modal_open', false);
-            document.querySelector('body').style.overflow = 'auto';
-        });
-    }
-});
-
-const TEMPS = {
-    'manual': -10,
-    'cold': 0,
-    'warm': 23,
-    'hot': 30
-}
-
-document.querySelectorAll('.modal__filter-item_temp').forEach(l => {
-    l.onclick = function() {
-        document.querySelector('.adjust-bar_theme_temp').value = TEMPS[this.id];
-        document.querySelector('.modal_temp .modal__value').innerHTML = TEMPS[this.id] > 0 ? '+' + TEMPS[this.id] : TEMPS[this.id];
-    }
-});
-
-const showModal = function(selector) {
-    document.querySelector(selector).classList.toggle('modal_open', true);
-    document.querySelector('body').style.overflow = 'hidden';
-}
-
-
-document.querySelectorAll('.panel_lamp').forEach(p => {
-    p.onclick = function() {
-        showModal('.modal_light');
-    }
-});
-
-document.querySelectorAll('.panel_floor').forEach(p => {
-    p.onclick = function() {
-        showModal('.modal_knob');
-    }
-});
-
 document.addEventListener("DOMContentLoaded", function () {
     const buttonsContainer = document.querySelector('.buttons-wrap');
 
     buttonsContainer.innerHTML = '<button class="button button_yellow" type="button">Да</button>' +
         '<button class="button">Нет</button>';
-        
+
     [].slice.call(document.querySelectorAll('.card')).forEach(item => {
         if (item.classList.contains('card_size_s')) {
             item.style.borderRadius = '22px';
@@ -73,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         '<img class="card-icon" src="img/kettle.svg">' +
                     '</div>' +
                     '<h3 class="card-title">Вода вскипела</h3>' +
-               ' </div>' +
+                ' </div>' +
                 '<div class="card-specs">' +
                     '<p class="card-source">Чайник</p>' +
                     '<p class="card-time card-time_block">16:20, Сегодня</p>' +
@@ -112,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
             buttonsContainer.style.display = "none";
         }
     }, 500)
-   
 
     document.getElementsByClassName("header-menu__switcher")[0].addEventListener("click", function () {
         document.getElementsByClassName("header-menu")[0].classList.toggle("header-menu_active")

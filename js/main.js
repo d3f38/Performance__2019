@@ -9,13 +9,13 @@ const devices = document.querySelector('.devices');
 const pagiantorDevs = document.querySelector('.devices__paginator');
 let currentPageDevs = 1;
 
-// $('.card').each(function(e) {
-//     if ($(this).hasClass('card_size_s')) {
-//         $(this).css({'border-radius': '22px'})
-//     } else {
-//         $(this).css({'border-radius': '54px'})
-//     }
-// });
+$('.card').each(function(e) {
+    if ($(this).hasClass('card_size_s')) {
+        $(this).css({'border-radius': '22px'})
+    } else {
+        $(this).css({'border-radius': '54px'})
+    }
+});
 
 
 let curValue;
@@ -70,13 +70,13 @@ document.querySelectorAll('.panel_floor').forEach(p => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // $('.card').each(function(e) {
-    //     if ($(this).hasClass('card_size_s')) {
-    //         $(this).css({'border-radius': '22px'})
-    //     } else {
-    //         $(this).css({'border-radius': '23px'})
-    //     }
-    // });
+    $('.card').each(function(e) {
+        if ($(this).hasClass('card_size_s')) {
+            $(this).css({'border-radius': '22px'})
+        } else {
+            $(this).css({'border-radius': '23px'})
+        }
+    });
     var waterContainer = document.querySelector('.card.card_size_s:last-child');
 
     waterContainer.innerHTML = 
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         '<img class="card-icon" src="img/kettle.svg">' +
                     '</div>' +
                     '<h3 class="card-title">Вода вскипела</h3>' +
-                ' </div>' +
+               ' </div>' +
                 '<div class="card-specs">' +
                     '<p class="card-source">Чайник</p>' +
                     '<p class="card-time card-time_block">16:20, Сегодня</p>' +
@@ -133,14 +133,12 @@ selectOptions.forEach(o => {
 
 
 
-// $(document).ready(function(){
-//     $(document).ready(function(){
+$(document).ready(function(){
 
-//     // var carousel = $("#carousel");
-//     var carousel = document.querySelector("#carousel");
+    var carousel = $("#carousel");
 
-//     carousel.owlCarousel();
-// });
+    carousel.owlCarousel();
+});
 
 function status(e) {
     return 200 <= e.status && e.status < 300 ? Promise.resolve(e) : Promise.reject(new Error(e.statusText))
@@ -153,12 +151,6 @@ function json(e) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    //
-
-    var carousel = document.querySelector("#carousel");
-
-    carousel.owlCarousel();
-    //
     const buttonsContainer = document.querySelector(".buttons-wrap");
     const fridgeInfoContainer = document.querySelector(".card_size_m:nth-child(8) .card-description");
     setTimeout(function() {

@@ -145,11 +145,11 @@ selectOptions.forEach(o => {
 //     var carousel = $("#carousel");
 
 //     carousel.owlCarousel();
+
 // });
 
-var carousel = document.querySelector("#carousel");
-
-    carousel.owlCarousel();
+// var carousel = document.querySelector("#carousel");
+// carousel.owlCarousel();
 
 function status(e) {
     return 200 <= e.status && e.status < 300 ? Promise.resolve(e) : Promise.reject(new Error(e.statusText))

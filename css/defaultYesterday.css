@@ -40,12 +40,6 @@ body {
   outline: 0 !important
 }
 
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible
-}
-
 h1,
 h2,
 h3,
@@ -154,18 +148,6 @@ a:not([href]):not([tabindex]):focus {
   outline: 0
 }
 
-pre,
-code,
-kbd,
-samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 1em
-}
-
-figure {
-  margin: 0 0 1rem
-}
-
 img {
   vertical-align: middle;
   border-style: none
@@ -265,34 +247,6 @@ input[type="month"] {
   -webkit-appearance: listbox
 }
 
-textarea {
-  overflow: auto;
-  resize: vertical
-}
-
-fieldset {
-  min-width: 0;
-  padding: 0;
-  margin: 0;
-  border: 0
-}
-
-legend {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  padding: 0;
-  margin-bottom: .5rem;
-  font-size: 1.5rem;
-  line-height: inherit;
-  color: inherit;
-  white-space: normal
-}
-
-progress {
-  vertical-align: baseline
-}
-
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto
@@ -306,17 +260,6 @@ progress {
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none
 }
-
-::-webkit-file-upload-button {
-  font: inherit;
-  -webkit-appearance: button
-}
-
-output {
-  display: inline-block
-}
-
-
 
 h1,
 h2,
@@ -365,63 +308,8 @@ h6,
   font-size: 1rem
 }
 
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300
-}
-
-hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px solid rgba(0, 0, 0, .1)
-}
-
 .purchase-list__item+.purchase-list__item {
   margin-top: 10px
-}
-
-.initialism {
-  font-size: 90%;
-  text-transform: uppercase
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto
-}
-
-.img-thumbnail {
-  padding: .25rem;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  border-radius: .25rem;
-  max-width: 100%;
-  height: auto
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px
-}
-
-.collapse:not(.show) {
-  display: none
-}
-
-.collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  transition: height 0.35s ease
-}
-
-@media (prefers-reduced-motion:reduce) {
-  .collapsing {
-    transition: none
-  }
 }
 
 .card {
@@ -432,11 +320,6 @@ hr {
   background-color: #fff;
   background-clip: border-box;
   border-radius: .25rem
-}
-
-.card>hr {
-  margin-right: 0;
-  margin-left: 0
 }
 
 .card-body {

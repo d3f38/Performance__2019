@@ -40,6 +40,16 @@ body {
   outline: 0 !important
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: .5rem
+}
+
 p {
   margin-top: 0;
   margin-bottom: 1rem
@@ -250,6 +260,7 @@ input[type="month"] {
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none
 }
+
 
 .purchase-list__item+.purchase-list__item {
   margin-top: 10px
